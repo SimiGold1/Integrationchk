@@ -36,11 +36,13 @@ const MapContainer = () => {
       </AppBar>
       <Card style={{ width: "100%", margin: "auto", marginTop: "20px" }}>
         <CardContent>
-        <Divider style={{ margin: "20px 0" }} /> // Divider and description
+         {/* Divider and description */}
+        <Divider style={{ margin: "20px 0" }} />  
         <Typography>
           Explore our map and discover new locations.
         </Typography>
-            <LoadScript googleMapsApiKey="AIzaSyC-9HBtGH2Tn5omz6Y4g9B29Jg5EVVx2xE" > // Ensure that the API key is valid and properly configured
+         {/* Ensure that the API key is valid and properly configured */}
+            <LoadScript googleMapsApiKey="AIzaSyC-9HBtGH2Tn5omz6Y4g9B29Jg5EVVx2xE" > 
                 <GoogleMap mapContainerStyle={mapStyles} zoom={15} center={defaultCenter}>
                     <Marker key={item.name} position={item.location}/>
                     <Button variant="contained" color="primary">
@@ -54,4 +56,5 @@ const MapContainer = () => {
 }
 
 
-export default MapContainer;  //Export the MapContainer component
+ export default MapContainer;  
+//  Export the MapContainer component
